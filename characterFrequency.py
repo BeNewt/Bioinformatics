@@ -15,8 +15,6 @@ AGGGGAGGATCAAGACTTTCTTGTGTCAAAACTCTTATCTTTGACCGCGATACTTCTGGA
 TCGAGGATAGCTACTGGAGATATGTTACGGAGATTAGACGCCCGAAGATTTTTACAGTTT
 CACTTTCCTTGTAGATTG"""
 
-hello = hello.replace('\r', '').replace('\n', '')
-
 tally_c = 0.0
 tally_g = 0.0
 tally_a = 0.0
@@ -33,6 +31,8 @@ for letter in hello:
     if letter == 'T':
         tally_t +=1
     count +=1
+
+hello = hello.replace('\r', '').replace('\n', '')
 
 def percentage(tally, count):
   return str((tally / count) * 100) + "%"
